@@ -1,4 +1,4 @@
-print("Hello World")
+print("Hello World und simon")
 
 if 5 > 2: 
  print("5 ist größer als 2")
