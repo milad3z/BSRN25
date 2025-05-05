@@ -1,1 +1,4 @@
-hello;
+print("Hello World")
+
+if 5 > 2: 
+ print("5 ist größer als 2")
