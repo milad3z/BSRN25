@@ -3,5 +3,4 @@
 name = "student"  # Chat-Name
 port = 5000  # persönlicher Empfangs-Port
 
-[network]  # Abschnitt für Netzwerk
-broadcast_port = 4000  # Port für Broadcast-Nachrichten
+
