@@ -1,8 +1,6 @@
 ## @file config_loader.py
 # @brief Hilfsmodul zum Laden der Konfiguration.
 # @author Taha, Simon, Milad, Matin
-# @version 1.0
-# @date 2025-06-22
 
 import toml
 from pathlib import Path
