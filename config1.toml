@@ -1,0 +1,7 @@
+[user]
+handle = "Bob"
+port = 5000
+whoisport = 4000
+
+[discovery]
+enabled = true

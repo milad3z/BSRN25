@@ -1,16 +1,24 @@
+## @file config_loader.py
+# @brief Hilfsmodul zum Laden der Konfiguration.
+# @author Taha, Simon, Milad, Matin
+# @version 1.0
+# @date 2025-06-22
 
-import toml  # Bibliothek für TOML-Dateien
-from pathlib import Path  # Für Dateipfade
+import toml
+from pathlib import Path
 
-def load_config():
+def load_config(config_filename="config.toml"):
+    """! Lädt eine Konfigurationsdatei im TOML-Format.
+    @param config_filename Der Dateiname der zu ladenden Konfiguration.
+    @return Ein Dictionary mit den Konfigurationsdaten oder `None` bei einem Fehler.
+    """
     try:
-        # Findet den Pfad zur config.toml
-        config_path = Path(__file__).parent.parent / "config.toml"
-        
-        # Öffnet die Datei im Lesemodus ('r' = read)
-        with open(config_path, "r") as tomlDatei:
-            # Lädt die TOML-Datei und gibt sie zurück
-            return toml.load(tomlDatei)
+        config_path = Path(__file__).parent.parent / config_filename
+        if not config_path.exists():
+            print(f"Fehler: Konfigurationsdatei '{config_filename}' nicht gefunden.")
+            return None
+        with open(config_path, "r") as config_file:
+            return toml.load(config_file)
     except Exception as e:
         print(f"Config error: {e}")
-        return None  # Nichts zurückgeben
+        return None
