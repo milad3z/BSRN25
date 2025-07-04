@@ -1,6 +1,6 @@
 [user]
 handle = "Alice"
-port = 5002
+port = 5001
 whoisport = 4000
 
 [discovery]
